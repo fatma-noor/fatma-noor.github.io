@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatma Noor Kassim</title>
+  <meta name="description" content="Fatma Noor Kassim — MSc Data Science at LSE, previously four years in strategy consulting at BCG.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Fatma Noor Kassim</h1>
+      <p class="tagline">MSc Data Science at LSE, previously four years in strategy consulting at BCG. I work on machine learning, statistical modelling, and data-driven strategy.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>I spent four years at BCG working across healthcare, fintech, and development, from due diligence and market sizing to strategy for governments and foundations. I'm now doing an MSc in Data Science at LSE, building the technical depth to move from framing problems to solving them with data. My recent work spans high-dimensional feature selection, distributed computing, and an AI-for-good project at Oxford.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+          <article class="card">
+            <h3>Feature Selection for High-Dimensional Neural Decoding</h3>
+            <p>Compared six feature selection methods (Forward Stepwise, mRMR, Lasso, Elastic Net, Random Forest and Gradient Boosting importance) on a neuroscience dataset where features vastly outnumbered samples (11,190 features, 683 trials). Built a unified evaluation pipeline scoring balanced accuracy, sparsity, and runtime. Forward Stepwise won the trade-off: 0.774 balanced accuracy with just 30 features.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/high-dimensional-feature-selection" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card">
+            <h3>Distributed CTR Prediction at Scale</h3>
+            <p>Built a PySpark pipeline on Google Cloud Dataproc to predict click-through rates on the Avazu dataset. Compared a per-channel local logistic regression against a Spark MLlib global baseline to test whether partitioning was worth the added complexity. Size-up experiments across 25 to 100 percent of the data showed 3.6x scaling on the channel-partitioned model at 4x data.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/avazu-ctr-prediction" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card">
+            <h3>Sephora Product Exclusivity Analysis</h3>
+            <p>Analysed Sephora's exclusivity strategy across 8,494 products and around 1 million reviews. Built regression models, ran sentiment analysis on review text, and clustered products by engagement profile. Found that exclusivity drives engagement (loves, reviews) but not stronger sentiment, so it works as an attention strategy.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/sephora-exclusivity-analysis" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="contact-intro">If you'd like to get in touch, fill out the form below and it'll come straight to me. You can also find me on LinkedIn and GitHub.</p>
+
+        <!--
+          FORM SETUP
+          ----------
+          Replace YOUR_FORM_ENDPOINT below with the endpoint you get from your
+          form service after creating a free account:
+
+            Formspree   -> action="https://formspree.io/f/xxxxxxxx"
+            Web3Forms   -> keep action="https://api.web3forms.com/submit" and
+                           paste your key into the hidden "access_key" field
+                           (uncomment the line marked WEB3FORMS below).
+
+          Your email address is never written into this file. The service holds
+          it privately and forwards submissions to your inbox.
+        -->
+        <form id="contact-form" action="YOUR_FORM_ENDPOINT" method="POST">
+          <!-- WEB3FORMS: if using Web3Forms, uncomment the next line and paste your key -->
+          <!-- <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"> -->
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Send</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="social-links">
+          <a href="https://linkedin.com/in/fatma-noor" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/fatma-noor" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Fatma Noor Kassim</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fill copyright year.
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Submit the contact form without leaving the page.
+    // Works with Formspree and Web3Forms, both of which accept JSON POSTs.
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function (e) {
+      // If the endpoint hasn't been set yet, let the browser handle it normally.
+      if (form.getAttribute('action') === 'YOUR_FORM_ENDPOINT') return;
+
+      e.preventDefault();
+      status.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.reset();
+            status.textContent = "Thanks, your message has been sent.";
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again.';
+        });
+    });
+  </script>
+</body>
+</html>
