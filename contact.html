@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Fatma Noor Kassim</title>
+  <meta name="description" content="Contact — Fatma Noor Kassim.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Fatma Noor Kassim</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="files/Fatma_Noor_Kassim_CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="section">
+        <h1>Contact</h1>
+        <p class="contact-intro">If you'd like to get in touch, fill out the form below and it'll come straight to me. You can also find me on LinkedIn and GitHub.</p>
+
+        <!--
+          FORM SETUP
+          ----------
+          Replace YOUR_FORM_ENDPOINT below with the endpoint from your form service:
+
+            Formspree   -> action="https://formspree.io/f/xxxxxxxx"
+            Web3Forms   -> keep action="https://api.web3forms.com/submit" and
+                           uncomment the hidden access_key input, pasting your key.
+
+          Your email address is never written into this file. The service holds it
+          privately and forwards submissions to your inbox.
+        -->
+        <form id="contact-form" action="YOUR_FORM_ENDPOINT" method="POST">
+          <!-- WEB3FORMS: if using Web3Forms, uncomment and paste your key -->
+          <!-- <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"> -->
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Send</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="social-links">
+          <a href="https://linkedin.com/in/fatma-noor" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/fatma-noor" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span class="year"></span> Fatma Noor Kassim</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // Submit the contact form without leaving the page.
+    // Works with Formspree and Web3Forms, both of which accept JSON POSTs.
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function (e) {
+      // If the endpoint hasn't been set yet, let the browser handle it normally.
+      if (form.getAttribute('action') === 'YOUR_FORM_ENDPOINT') return;
+
+      e.preventDefault();
+      status.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.reset();
+            status.textContent = 'Thanks, your message has been sent.';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again.';
+        });
+    });
+  </script>
+</body>
+</html>

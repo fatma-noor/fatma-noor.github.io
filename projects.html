@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Fatma Noor Kassim</title>
+  <meta name="description" content="Projects — Fatma Noor Kassim.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Fatma Noor Kassim</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="files/Fatma_Noor_Kassim_CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="section">
+        <h1>Projects</h1>
+        <div class="project-grid">
+
+          <article class="card">
+            <h3>Feature Selection for High-Dimensional Neural Decoding</h3>
+            <p>Compared six feature selection methods (Forward Stepwise, mRMR, Lasso, Elastic Net, Random Forest and Gradient Boosting importance) on a neuroscience dataset where features vastly outnumbered samples (11,190 features, 683 trials). Built a unified evaluation pipeline scoring balanced accuracy, sparsity, and runtime. Forward Stepwise won the trade-off: 0.774 balanced accuracy with just 30 features.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/high-dimensional-feature-selection" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card">
+            <h3>Distributed CTR Prediction at Scale</h3>
+            <p>Built a PySpark pipeline on Google Cloud Dataproc to predict click-through rates on the Avazu dataset. Compared a per-channel local logistic regression against a Spark MLlib global baseline to test whether partitioning was worth the added complexity. Size-up experiments across 25 to 100 percent of the data showed 3.6x scaling on the channel-partitioned model at 4x data.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/avazu-ctr-prediction" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+          <article class="card">
+            <h3>Sephora Product Exclusivity Analysis</h3>
+            <p>Analysed Sephora's exclusivity strategy across 8,494 products and around 1 million reviews. Built regression models, ran sentiment analysis on review text, and clustered products by engagement profile. Found that exclusivity drives engagement (loves, reviews) but not stronger sentiment, so it works as an attention strategy.</p>
+            <a class="card-link" href="https://github.com/fatma-noor/sephora-exclusivity-analysis" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+          </article>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span class="year"></span> Fatma Noor Kassim</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
