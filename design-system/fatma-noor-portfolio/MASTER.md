@@ -32,6 +32,7 @@ All website wording is in content.json. Existing non-Home content and structure 
 | Accent | #6846C5 | #B4A1F5 |
 | Accent hover | #5334A7 | #CBBDFF |
 | Soft accent | #F0EBFC | #252035 |
+| Role pill background / text | #7047D9 / #FFFFFF | #7047D9 / #FFFFFF |
 | Section tint | #F8F8FC | #15151D |
 | Tag background | #F1EEF9 | #292437 |
 | Tag text | #594B7F | #D0C4EC |
@@ -59,7 +60,7 @@ Semantic CSS variables apply to every tab. Organisation logos retain their artwo
 
 ## Home Structure
 
-1. Hero: exact greeting, five roles separated by thin dividers, exact role-seeking sentence, View my experience and Contact me buttons, LinkedIn/GitHub/Email icon links. Photo comes first on phones.
+1. Hero: exact greeting, Ex-BCG/LSE introductory line, exact role-seeking sentence, Roles you can hire me for heading and five solid bright violet pills with white text, then View my experience and Contact me buttons and LinkedIn/GitHub/Email icon links. Pills wrap as needed. Photo comes first on phones.
 2. About: two unchanged paragraphs on the left, three icon rows on the right.
 3. Tools: all twelve named tools in a responsive tile grid.
 4. Skills: all four groups and every supplied tag, followed by View my experience.
@@ -99,7 +100,7 @@ Only 150ms colour feedback and disclosure-chevron rotation are used. Reduced mot
 
 Apply the skill's web Quick Reference sections 1 to 3 plus focused dark-mode and keyboard/form guidance. Native-app-only haptics, Dynamic Type and point/dp checks do not apply.
 
-- [x] 335 brief content entries and all 60 narrative blocks are verified.
+- [x] 337 brief content entries and all 60 narrative blocks are verified.
 - [x] All non-Home content, navigation, photos and form copy match the pre-refresh snapshot exactly.
 - [x] All approved labels and headings are stored in content.json.
 - [x] No em dashes or added client identifiers in site copy.

@@ -49,7 +49,9 @@
   ],
   "home": {
     "greeting": "Hi, I'm Fatma Noor.",
+    "intro": "Ex-BCG consultant with an MSc in Data Science from LSE.",
     "strapline": "I'm looking for roles where I can own problems from analysis through to delivery.",
+    "rolesHeading": "Roles you can hire me for:",
     "roles": [
       "Strategy & Operations",
       "Chief of Staff",
@@ -61,7 +63,7 @@
     "about": {
       "heading": "About",
       "paragraphs": [
-        "I recently completed an MSc in Data Science at LSE, after four years at BCG in Nairobi working with foundations, governments and companies across Africa. That work ranged from a national AI strategy to a livestock market pilot replicated in three countries.",
+        "I recently completed an MSc in Data Science at LSE, after four years as a management consultant at BCG in Nairobi. I worked with all kinds of clients: private companies, conglomerates, private equity firms, foundations, governments and many startups. The work involved designing strategies, running and implementing programmes, organising events, launching pilots and raising funds. Highlights include a national AI strategy since adopted by the government, a livestock market pilot replicated in three countries, and $2M in annual savings from redesigning a conglomerate's headquarters.",
         "I've since moved closer to building. I co-founded Roofly Kenya, a verified property marketplace, and at Oxford I built the website and triage flow for Rosa, an AI chatbot supporting survivors of modern slavery."
       ],
       "info": [

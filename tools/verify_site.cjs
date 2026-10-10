@@ -11,6 +11,7 @@ const snapshot = path.join(output, 'content-before-home-refresh.json');
 if (fs.existsSync(snapshot)) {
   const before = JSON.parse(fs.readFileSync(snapshot, 'utf8'));
   ['navigation', 'experience', 'projects', 'leadership', 'education', 'hobbies', 'contact', 'photos'].forEach(key => assert.deepEqual(content[key], before[key], `Unexpected non-Home content change: ${key}`));
+  if (before.home.about) assert.equal(content.home.about.paragraphs[1], before.home.about.paragraphs[1], 'Keep second About paragraph unchanged');
 }
 assert.deepEqual(content.navigation.map(item => item.label), ['Home', 'Experience', 'Projects', 'Leadership & Extracurricular', 'Education', 'Hobbies & Interests', 'Contact']);
 assert(!JSON.stringify(content).includes('\u2014'), 'Em dash in content');
@@ -38,6 +39,7 @@ function verifyCopy(value) {
   else Object.values(value).forEach(verifyCopy);
 }
 ['home', 'experience', 'projects', 'leadership', 'education', 'hobbies'].forEach(key => verifyCopy(content[key]));
+content.home.about.paragraphs.forEach(text => assert(rawBrief.includes(text), 'About paragraph must match brief word for word'));
 const allContent = normalize(JSON.stringify(content));
 const narrativeSections = [...rawBrief.matchAll(/\*\*(?:Problem|What I did|Result|Overview|Approach|Outcome)\*\*\n([^\n]+)/g)];
 assert.equal(narrativeSections.length,60);
@@ -69,8 +71,11 @@ assert.equal(content.education.prizes.items.length, 5);
     await page.evaluate(() => document.fonts.ready);
     assert.equal(await page.title(), content.name);
     await page.screenshot({ path: path.join(output, 'home-desktop.png'), fullPage: true });
-    const roles = await page.locator('.home-roles span').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().top));
-    assert.equal(new Set(roles).size, 1, 'Desktop target roles must share a row');
+    assert.deepEqual(await page.locator('.hero-copy > *').evaluateAll(nodes => nodes.map(node => node.className)), ['hero-title','hero-intro','hero-strapline','roles-heading','home-roles','home-actions','social-links'], 'Hero content order');
+    assert.equal(await page.locator('.hero-intro').textContent(), content.home.intro);
+    assert.equal(await page.locator('.roles-heading').textContent(), content.home.rolesHeading);
+    assert.deepEqual(await page.locator('.home-roles span').allTextContents(), content.home.roles);
+    assert.deepEqual(await page.locator('.about-copy > p').allTextContents(), content.home.about.paragraphs);
     assert.equal(await page.locator('.hero-title').textContent(), content.home.greeting);
     assert.equal(await page.locator('.brand').textContent(), 'Fatma Noor');
     assert.equal(await page.locator('.tool-tile').count(), 12);
@@ -83,7 +88,7 @@ assert.equal(content.education.prizes.items.length, 5);
       if (await page.locator('html').getAttribute('data-theme') !== theme) await page.locator('#theme-toggle').click();
       const tokens=await page.evaluate(()=>{
         const style=getComputedStyle(document.documentElement);
-        return Object.fromEntries(['background','surface','text','secondary','accent','accent-hover','accent-soft','muted','muted-text','band','error','success','name-end'].map(key=>[key,style.getPropertyValue(`--${key}`).trim()]));
+        return Object.fromEntries(['background','surface','text','secondary','accent','accent-hover','accent-soft','muted','muted-text','band','error','success','name-end','role-background','role-text'].map(key=>[key,style.getPropertyValue(`--${key}`).trim()]));
       });
       contrastResults[theme]=[];
       for(const foreground of ['text','secondary','accent','accent-hover','error','success']) {
@@ -94,6 +99,12 @@ assert.equal(content.education.prizes.items.length, 5);
         }
       }
       assert(contrast(tokens['muted-text'],tokens.muted)>=4.5,`${theme} skill-tag contrast`);
+      assert(contrast(tokens['role-text'],tokens['role-background'])>=4.5,`${theme} role-pill contrast`);
+      const pillStyles = await page.locator('.home-roles span').evaluateAll(nodes => nodes.map(node => {
+        const style = getComputedStyle(node);
+        return [style.color, style.backgroundColor, style.backgroundImage, style.borderLeftWidth, style.borderRadius];
+      }));
+      pillStyles.forEach(style => assert.deepEqual(style, ['rgb(255, 255, 255)','rgb(112, 71, 217)','none','0px','999px'], `${theme} solid role pills without dividers`));
       for(const stop of ['accent','name-end']) assert(contrast(tokens[stop],tokens.background)>=3,`${theme} name gradient contrast`);
       assert(contrast(theme==='dark'?'#171120':'#ffffff',tokens.accent)>=4.5,`${theme} primary button contrast`);
       for (const tab of content.navigation) {
@@ -105,6 +116,8 @@ assert.equal(content.education.prizes.items.length, 5);
       await page.locator('#navigation a[href="#home"]').click();
       await page.locator('#view-home').waitFor({state:'visible'});
       await page.screenshot({path:path.join(output,`home-${theme}.png`),fullPage:true});
+      const aboutBottom = await page.locator('.about-band').evaluate(node => Math.ceil(node.getBoundingClientRect().bottom + window.scrollY));
+      await page.screenshot({path:path.join(output,`home-hero-about-${theme}.png`),fullPage:true,clip:{x:0,y:0,width:1440,height:aboutBottom}});
       await page.locator('.contact-band').screenshot({path:path.join(output,`home-contact-${theme}.png`)});
       for (const key of ['linkedin','github']) assert.equal(await page.locator(`.contact-band-links a[href="${content.links[key].url}"]`).textContent(),content.links[key].label);
       await page.locator('.contact-band .message-link').click();

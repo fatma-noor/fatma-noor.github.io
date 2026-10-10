@@ -31,28 +31,32 @@ Tabs, in this order:
 
 ## Home | FINAL (revised: multi-section home page)
 
-The Home page is now a scrolling page with five sections, in this order. Show the name once only (in the hero). The nav brand reads "Fatma Noor".
+The Home page is now a scrolling page with six sections, in this order. Show the name once only (in the hero). The nav brand reads "Fatma Noor".
 
 ### 1. Hero
 Two columns on desktop: text on the left, photo on the right. Stacks on mobile, photo first.
 
 **Hi, I'm Fatma Noor.**
 
-Strategy & Operations | Chief of Staff | Product Management | Applied AI | Business Strategy & Development
+Ex-BCG consultant with an MSc in Data Science from LSE.
 
 I'm looking for roles where I can own problems from analysis through to delivery.
+
+**Roles you can hire me for:**
+
+Strategy & Operations | Chief of Staff | Product Management | Applied AI | Business Strategy & Development
 
 Buttons: View my experience (primary, goes to the Experience tab), Contact me (secondary, goes to the Contact tab)
 Icon links under the buttons: LinkedIn (linkedin.com/in/fatma-noor/), GitHub (github.com/fatma-noor), Email (goes to the Contact tab)
 
 Layout notes:
-- Show the five roles as one line under the name, separated by thin dividers, in the accent colour. Wrap on mobile.
+- Keep the hero content in the order above. Show the five roles below their small heading as rounded pill tags with a solid, bright accent background and white text. Wrap as needed. Do not use thin dividers.
 - Crop the headshot into a soft organic blob shape, with one or two abstract shapes in the accent colour layered behind it, offset slightly.
 
 ### 2. About
 Left: the two paragraphs. Right: an info card with three rows, each with a small icon.
 
-I recently completed an MSc in Data Science at LSE, after four years at BCG in Nairobi working with foundations, governments and companies across Africa. That work ranged from a national AI strategy to a livestock market pilot replicated in three countries.
+I recently completed an MSc in Data Science at LSE, after four years as a management consultant at BCG in Nairobi. I worked with all kinds of clients: private companies, conglomerates, private equity firms, foundations, governments and many startups. The work involved designing strategies, running and implementing programmes, organising events, launching pilots and raising funds. Highlights include a national AI strategy since adopted by the government, a livestock market pilot replicated in three countries, and $2M in annual savings from redesigning a conglomerate's headquarters.
 
 I've since moved closer to building. I co-founded Roofly Kenya, a verified property marketplace, and at Oxford I built the website and triage flow for Rosa, an AI chatbot supporting survivors of modern slavery.
 
@@ -83,9 +87,12 @@ Three cards, each with the project title, one-liner, tool tags and a link to its
 - **Distributed Ad-Click Prediction:** One global model beat partitioned models on ranking, at a tenth of the training time. Tags: PySpark | Google Cloud | Logistic regression
 - **Sephora Exclusivity Analysis:** Exclusives win attention without winning happier reviews. Tags: Python | Regression | Clustering
 
+### 6. Get in touch
+Bottom contact band: label Contact, heading Get in touch, LinkedIn and GitHub links, and a Send me a message button that opens the Contact tab. No supporting sentence.
+
 ### Theme
 - White background by default, with a light/dark toggle in the nav. On first visit, follow the visitor's system setting, then remember their choice.
-- Accent colour: a violet/indigo, used for the name, the role line, buttons and the shapes behind the photo. A subtle gradient on the name only is fine.
+- Accent colour: a violet/indigo, used for the name, the role pills, buttons and the shapes behind the photo. A subtle gradient on the name only is fine.
 
 ---
 

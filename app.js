@@ -105,10 +105,12 @@
     const title = element('h1', 'hero-title');
     const start = content.home.greeting.indexOf(content.navBrand);
     title.append(document.createTextNode(content.home.greeting.slice(0, start)), element('span', 'name-accent', content.navBrand), document.createTextNode(content.home.greeting.slice(start + content.navBrand.length)));
-    const roles = element('p', 'home-roles');
+    const roles = element('div', 'home-roles');
     content.home.roles.forEach(role => roles.append(element('span', '', role)));
-    copy.append(title, roles);
+    copy.append(title);
+    paragraph(copy, content.home.intro, 'hero-intro');
     paragraph(copy, content.home.strapline, 'hero-strapline');
+    copy.append(element('h2', 'roles-heading', content.home.rolesHeading), roles);
     const actions = element('div', 'home-actions');
     actions.append(arrowLink(content.home.experienceLink, '#experience', 'button experience-link'), link(content.links.contact.label, '#contact', 'button button-secondary'));
     const socials = element('div', 'social-links');
