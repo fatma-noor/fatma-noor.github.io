@@ -1,0 +1,899 @@
+{
+  "name": "Fatma Noor Kassim",
+  "navBrand": "Fatma Noor",
+  "sectionHeadings": {
+    "about": { "label": "About", "heading": "From consulting to building" },
+    "tools": { "label": "Tools", "heading": "Tools I work with" },
+    "skills": { "label": "Skills", "heading": "What I bring" },
+    "featured": { "label": "Featured projects", "heading": "Selected data science work" },
+    "experience": { "label": "Experience", "heading": "Where I've worked" },
+    "projects": { "label": "Projects", "heading": "Data science projects" },
+    "leadership": { "label": "Leadership & Extracurricular", "heading": "Beyond the day job" },
+    "education": { "label": "Education", "heading": "Where I studied" },
+    "hobbies": { "label": "Hobbies & Interests", "heading": "Outside work" },
+    "contact": { "label": "Contact", "heading": "Get in touch" }
+  },
+  "logos": {
+    "experience": ["images/logos/roofly.webp", "images/logos/oxford.svg", "images/logos/bcg.webp"],
+    "education": ["images/logos/lse.webp", "images/logos/uon.webp"]
+  },
+  "navigation": [
+    {
+      "id": "home",
+      "label": "Home"
+    },
+    {
+      "id": "experience",
+      "label": "Experience"
+    },
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "leadership",
+      "label": "Leadership & Extracurricular"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "hobbies",
+      "label": "Hobbies & Interests"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "home": {
+    "greeting": "Hi, I'm Fatma Noor.",
+    "strapline": "I'm looking for roles where I can own problems from analysis through to delivery.",
+    "roles": [
+      "Strategy & Operations",
+      "Chief of Staff",
+      "Product Management",
+      "Applied AI",
+      "Business Strategy & Development"
+    ],
+    "experienceLink": "View my experience",
+    "about": {
+      "heading": "About",
+      "paragraphs": [
+        "I recently completed an MSc in Data Science at LSE, after four years at BCG in Nairobi working with foundations, governments and companies across Africa. That work ranged from a national AI strategy to a livestock market pilot replicated in three countries.",
+        "I've since moved closer to building. I co-founded Roofly Kenya, a verified property marketplace, and at Oxford I built the website and triage flow for Rosa, an AI chatbot supporting survivors of modern slavery."
+      ],
+      "info": [
+        { "label": "Education", "text": "MSc Data Science, LSE | BSc Economics and Statistics, First Class Honours, University of Nairobi" },
+        { "label": "Experience", "text": "4 years at BCG | Co-Founder, Roofly Kenya | Research Assistant, Oxford" },
+        { "label": "Interests", "text": "Supporting women at work | Puzzles and strategy games | Baking | Eating out" }
+      ]
+    },
+    "tools": {
+      "heading": "Tools I work with",
+      "items": ["Python", "R", "SQL", "PySpark", "Google Cloud", "Tableau", "Alteryx", "Excel", "Git", "LaTeX", "Claude Code", "Codex"]
+    },
+    "skills": {
+      "heading": "Skills",
+      "groups": [
+        { "heading": "Strategy", "tags": ["AI strategy", "Growth strategy", "Go-to-market strategy", "Prioritisation", "Problem framing", "Organisation design", "Operating model design", "Programme design"] },
+        { "heading": "Commercial and finance", "tags": ["Market sizing", "Financial modelling", "Scenario analysis", "Cost modelling", "Due diligence", "Investment screening", "Cost reduction"] },
+        { "heading": "Product and data", "tags": ["Product management", "UX evaluation", "Analytics set-up", "Geospatial analysis", "Location analysis", "Market research", "Survey analysis", "Performance tracking"] },
+        { "heading": "Leadership and stakeholders", "tags": ["Team leadership", "Stakeholder management", "Client management", "Partnership design", "Investor interviews", "Marketing campaigns", "Event management"] }
+      ]
+    },
+    "featured": {
+      "heading": "Featured projects",
+      "allLink": "View all projects",
+      "items": [
+        { "title": "Feature Selection for Neural Decoding", "summary": "30 of 11,190 features, 77% balanced accuracy.", "tags": ["Python", "Feature selection", "Machine learning"] },
+        { "title": "Distributed Ad-Click Prediction", "summary": "One global model beat partitioned models on ranking, at a tenth of the training time.", "tags": ["PySpark", "Google Cloud", "Logistic regression"] },
+        { "title": "Sephora Exclusivity Analysis", "summary": "Exclusives win attention without winning happier reviews.", "tags": ["Python", "Regression", "Clustering"] }
+      ]
+    }
+  },
+  "links": {
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/fatma-noor/"
+    },
+    "github": {
+      "label": "GitHub",
+      "url": "https://github.com/fatma-noor"
+    },
+    "contact": {
+      "label": "Contact me",
+      "url": "#contact"
+    },
+    "message": {
+      "label": "Send me a message",
+      "url": "#contact"
+    },
+    "email": {
+      "label": "Email",
+      "url": "#contact"
+    }
+  },
+  "experience": {
+    "items": [
+      {
+        "skills": [
+          "Product management",
+          "Market research",
+          "Go-to-market strategy",
+          "Payments design",
+          "Pitching"
+        ],
+        "sections": [
+          {
+            "label": "Problem",
+            "paragraphs": [
+              "Finding a home in Kenya means wading through fraud. Properties get listed that don't exist, agents aren't verified, and renters are often asked to pay fees upfront to people they have no way of checking."
+            ]
+          },
+          {
+            "label": "What I did",
+            "paragraphs": [
+              "I co-founded Roofly with my brother, who leads the technical build. I own the market research, go-to-market strategy, payment design, pitch deck and design input. We built Roofly around trust. Agents and owners who list their own property can sign up, every listing is reviewed before it goes live, and enquiries go straight to the person responsible for the listing. Next come 360-degree viewing and escrow. If a lister asks for a fee before a viewing, Roofly will hold the money. If the deal goes through, it is released to them. If not, it goes back to the renter."
+            ]
+          },
+          {
+            "label": "Result",
+            "paragraphs": [
+              "The platform is live with search, listing and review in place, and we are preparing to onboard our first listings."
+            ]
+          }
+        ],
+        "title": "Roofly Kenya",
+        "role": "Co-Founder",
+        "dates": "July 2026 to present",
+        "summary": "Building a verified property marketplace to tackle rental fraud in Kenya",
+        "url": "https://rooflykenya.vercel.app/"
+      },
+      {
+        "skills": [
+          "Product management",
+          "AI-assisted development (Claude Code)",
+          "UX evaluation",
+          "Analytics set-up",
+          "Ethical data collection"
+        ],
+        "sections": [
+          {
+            "label": "Problem",
+            "paragraphs": [
+              "Survivors of modern slavery often don't know their rights or how to reach help, and seeking it can put them at risk. Rosa gives them a safe place to learn their rights and find out how to contact the authorities for support. The project began at a Blavatnik School hackathon and was shaped by the experiences of real survivors."
+            ]
+          },
+          {
+            "label": "What I did",
+            "paragraphs": [
+              "I joined as a research assistant before the project's second hackathon and became the technical lead in the team, with other RAs covering market research and qualitative work. I built the website with Claude Code and product-managed the chatbot's triage flow. I also set up the QR codes that bring users to the chatbot, a database for ethical data collection, and analytics, and I ran the UX and ethical evaluation. At the second hackathon, we tested Rosa with legal practitioners, government staff and survivors themselves. I then built their feedback into the website. That included a quick-exit button, which takes a survivor straight to Google if they sense someone coming and fear being caught seeking help. I also built a landing page that sends survivors directly to the chatbot and sends anyone wanting to learn about the project to the project site."
+            ]
+          },
+          {
+            "label": "Result",
+            "paragraphs": [
+              "Rosa is a working prototype, refined with input from the people it is built for, and not yet deployed."
+            ]
+          }
+        ],
+        "title": "Rosa: AI Support for Survivors of Modern Slavery",
+        "role": "Research Assistant, Oxford Blavatnik School of Government",
+        "dates": "May to July 2026",
+        "summary": "One-liner: Built the website and triage flow for Rosa, an AI chatbot helping survivors of modern slavery find support"
+      }
+    ],
+    "bcg": {
+      "title": "BCG (Business Analyst to Consultant, June 2021 to June 2025)",
+      "levels": [
+        {
+          "heading": "Consultant (Sept 2024 to June 2025)",
+          "projects": [
+            {
+              "skills": [
+                "Market sizing",
+                "Financial modelling",
+                "Scenario analysis",
+                "Investor interviews"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "An international foundation had a live pilot in East Africa linking pastoralists directly to an export abattoir. To scale it, the foundation needed other funders to invest alongside it."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "98% of East Africa's red meat exports go to the Gulf, so I sized that market and identified the share East African meat could realistically win: supermarkets and retail, since premium meat largely comes from other countries. I interviewed financiers in the Middle East and East Africa to test their appetite. I then built an ROI model with scenarios for drought, intertribal conflict, climate shocks and status quo, because these risks can wipe out herds almost overnight."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We identified a $3B market, about $1.5B of it addressable, with a projected 11% five-year return. Private equity and other private capital found the risk too high, mainly because of drought. The conclusion was that this model can only be funded by impact investors."
+                  ]
+                }
+              ],
+              "title": "Red Meat Blended Finance Model",
+              "summary": "Tested whether private capital would fund a pastoralist red meat market, and found only impact investors would"
+            },
+            {
+              "skills": [
+                "AI strategy",
+                "Prioritisation",
+                "Sector analysis",
+                "Stakeholder interviews",
+                "Costing"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "A government ministry wanted a national AI strategy to scale the use of AI across the country."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "We started by interviewing countries that already had AI strategies, to learn how they built them. We then reviewed every sector in the country for where AI could add the most value. I narrowed this to three sectors, agriculture, health and education, scored on impact, feasibility, reach and ease of implementation in the short term. We then costed what each would need."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We delivered a strategy covering the priority sectors, use cases, implementation timeline and funding required. The ministry adopted it and has started fundraising to implement it."
+                  ]
+                }
+              ],
+              "title": "National AI Strategy",
+              "summary": "Prioritised three sectors and costed a national AI strategy, since adopted by the government"
+            },
+            {
+              "skills": [
+                "Geospatial analysis",
+                "Problem framing",
+                "Client management",
+                "Cost analysis"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "Mobile money has expanded access to finance in remote parts of Kenya and Ghana. An African government wanted the same, but its mobile money network hadn't reached remote regions. A development funder needed to know how to scale it."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I led the client-facing work and problem framing, working with BCG's tech team, who built the geospatial model. We mapped every agent across the country's rural areas, using agent submissions, web scraping and central bank records, to find saturated areas and gaps."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We produced a national coverage map, identified prime locations based on expected transaction volumes, and recommended 3 sites for new agents. We also laid out a plan for reaching remote regions based on other African countries' experience, covering agent training, extra support and a full cost estimate. This gave the funder a costed, location-by-location basis for deciding where to fund new agents."
+                  ]
+                }
+              ],
+              "title": "Mobile Money Agent Mapping",
+              "summary": "Mapped a national mobile money network to find where new agents could reach remote regions"
+            }
+          ]
+        },
+        {
+          "heading": "Senior Associate (Dec 2023 to Aug 2024)",
+          "projects": [
+            {
+              "skills": [
+                "Marketing campaigns",
+                "Performance tracking",
+                "Data-driven iteration",
+                "Senior stakeholder outreach"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "A pan-African healthcare accelerator needed a strong pool of applicants for its 2024 cohort."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I launched the application form and led the campaign, creating banners, social media posts, newsletters, website announcements, and posts in which alumni explained the impact the accelerator had on them. I tracked applications daily by category, such as telehealth and manufacturing, and used the numbers to decide which segments to target next, by stage (pre-seed, Series A or mature) and by sector. I also drafted outreach emails for senior leadership."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "The campaign delivered 100+ applications into the selection phase."
+                  ]
+                }
+              ],
+              "title": "Accelerator Applicant Campaign",
+              "summary": "Ran the campaign that brought in 100+ applications"
+            },
+            {
+              "skills": [
+                "Due diligence",
+                "Team leadership",
+                "Scoring frameworks",
+                "Tableau",
+                "Stakeholder management"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "The accelerator needed to pick the startups best placed to benefit from its support."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I ran the pre-selection and selection phases. Each week I prepared materials showing the applications received and built the shortlist, narrowing 100+ applications to 30. I led a team of 3 analysts and interns through due diligence on those 30, interviewing each startup's leaders, clients and investors. For each, we built a case for how the accelerator could help them, then scored them on a matrix of fit with the accelerator and likelihood of success. I built a Tableau dashboard so senior leaders could compare candidates by geography, maturity and revenue."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We selected the 10 best-placed startups, spanning manufacturing, telehealth and commerce, from seed to mature stage, and handed the cohort over for the acceleration phase."
+                  ]
+                }
+              ],
+              "title": "Healthcare Accelerator Selection",
+              "summary": "Selected 10 healthcare startups from 100+ applicants across Africa"
+            }
+          ]
+        },
+        {
+          "heading": "Associate (June 2022 to Nov 2023)",
+          "projects": [
+            {
+              "skills": [
+                "Organisation design",
+                "Employee surveys",
+                "Cost reduction",
+                "Workstream leadership"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "A major African family-run conglomerate with five business units had recently set up a headquarters, and the business units felt it was overriding their decisions. The client needed to define what its headquarters should do."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I led the initial workstream. We ran a confidential survey asking employees about the culture, their business unit, and whether the headquarters added value, alongside belief audits. From this we pinpointed the problems and redesigned the organisation: a lean headquarters, more autonomy for the business units, and clear reporting lines to their heads. We also designed a private family office, separate from the headquarters' mandate."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "The reorganisation identified $2M in annual cost savings."
+                  ]
+                }
+              ],
+              "title": "Conglomerate Role of the Centre",
+              "summary": "Redesigned a family conglomerate's headquarters and identified $2M in annual savings"
+            },
+            {
+              "skills": [
+                "Programme design",
+                "Partnership design",
+                "Operating model design",
+                "Cost modelling"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "Pastoralists were losing most of the value of their animals to middlemen and had little access to veterinary care, training or feed."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I designed the pilot. I identified the export abattoir to partner with and the starting region in Ethiopia. Under the model, the abattoir buys directly from pastoralists at a higher price, and the cost of training, veterinary care and feed is deducted from that price. We focused on goats and sheep because women rear them. I mapped how the funders, the company and the pastoralists would work together, and built a cost model covering the cost of bringing pastoralists on board, providing inputs and training, and the value the pilot would create over the following years."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "About $5M was deployed into the pilot. The model was proven in Ethiopia and replicated in Kenya and Nigeria."
+                  ]
+                }
+              ],
+              "title": "Pastoralist Market Pilot",
+              "summary": "Designed a pilot that paid pastoralists more, replicated in three countries"
+            },
+            {
+              "skills": [
+                "Market research",
+                "Survey analysis",
+                "Value chain analysis"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "An international foundation wanted to understand East Africa's livestock market."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "We researched the market and found that around 60 to 80% of meat in East Africa comes from pastoralists. To validate our findings, we surveyed 500+ livestock value chain actors."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "Two findings stood out. Pastoralists had little access to veterinary support, training or feed. They also sold to middlemen out of necessity, and the middlemen bought cheap and sold high, at a 2 to 3x markup, capturing most of the profit. These findings shaped the design of a demand-led pilot to support pastoralists. We also presented them at an event bringing together 100+ value chain actors from 14 countries, and the discussions there led to a dedicated pastoralist entity being established within an African Union body."
+                  ]
+                }
+              ],
+              "title": "Pastoralist Livestock Market Research",
+              "summary": "Found that middlemen take a 2 to 3x markup from pastoralists"
+            },
+            {
+              "skills": [
+                "Event management",
+                "Speaker outreach",
+                "Stakeholder coordination"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "The UK government wanted to connect Kenyan and UK horticulture trade parties through an event."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I managed and organised the event, covering the agenda, panels, speaker outreach and attendee logistics, and ran it on the day."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "The event launched what became a UK trade programme, since expanded to other regions including Asia."
+                  ]
+                }
+              ],
+              "title": "UK–Kenya Horticulture Trade Event",
+              "summary": "Organised the event that launched a UK government trade programme"
+            }
+          ]
+        },
+        {
+          "heading": "Business Analyst (June 2021 to May 2022)",
+          "projects": [
+            {
+              "skills": [
+                "Location analysis",
+                "Growth strategy",
+                "Sell-side due diligence",
+                "Market sizing"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "A private equity firm preparing to sell a Kenyan grocery chain needed an information memorandum for prospective buyers."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I wrote the sections on the chain's profile, competitive advantage and growth opportunity. I mapped expansion potential on a 1km by 1km grid, scoring each square on wealth, household income, road access and distance to the nearest competitor."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We delivered the information memorandum, including a growth strategy in which I identified 10 prime sites for new stores. The chain was sold to another private equity firm."
+                  ]
+                }
+              ],
+              "title": "Store Whitespace Strategy",
+              "summary": "Found 10 prime sites for a grocery chain's expansion ahead of its sale"
+            },
+            {
+              "skills": [
+                "Investment screening",
+                "Database building",
+                "Market analysis"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "An international foundation wanted to find green, inclusive companies in Africa to support."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I built a database of ~300 companies across sectors from the portfolios of major development funders, capturing each company's founding year, revenue, employees, funding and stage."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "Only 1 to 5 companies had passed $10M in revenue, and most were 70+ years old. African companies lack the access to capital and affordable advisory services that companies in developed markets have. This finding prompted a dedicated programme focused on food systems. Two companies, in aquaculture and sanitation, were selected to receive advisory support on scaling their operations, and both grew revenue by 30%."
+                  ]
+                }
+              ],
+              "title": "Green Investment Screening",
+              "summary": "Screened ~300 African companies and found only a handful had passed $10M in revenue"
+            },
+            {
+              "skills": [
+                "Market sizing",
+                "Value chain analysis",
+                "Stakeholder interviews",
+                "Trade strategy"
+              ],
+              "sections": [
+                {
+                  "label": "Problem",
+                  "paragraphs": [
+                    "A research institute needed a growth strategy for mango, banana, passion fruit, dairy and avocado in Kenya."
+                  ]
+                },
+                {
+                  "label": "What I did",
+                  "paragraphs": [
+                    "I interviewed 60+ producers, sellers and exporters, and sized each value chain across domestic, regional and international markets. I also designed a market-back model that starts from end buyers and connects them directly to producers, cutting out middlemen."
+                  ]
+                },
+                {
+                  "label": "Result",
+                  "paragraphs": [
+                    "We made 10 prioritised trade expansion recommendations across local, regional and export markets, giving the client a plan for which value chains and markets to grow first."
+                  ]
+                }
+              ],
+              "title": "Horticulture Value Chain Strategy",
+              "summary": "Made 10 trade expansion recommendations across five Kenyan value chains"
+            }
+          ],
+          "note": "Contract role, converted to a permanent Associate offer."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "intro": "All three are LSE MSc group projects, and I was the group lead on each. Code for each is on GitHub (github.com/fatma-noor).",
+    "items": [
+      {
+        "skills": [],
+        "sections": [
+          {
+            "label": "Overview",
+            "paragraphs": [
+              "Which feature selection methods still work when there are 16 times more features than observations? We tested this on mouse brain activity data: 11,190 features against 683 trials, with imbalanced classes and a weak signal spread thinly across many features."
+            ]
+          },
+          {
+            "label": "Approach",
+            "paragraphs": [
+              "I led the group, setting the research question, dividing the work and bringing everyone's pieces together. I wrote all six methods: forward stepwise, mRMR, Lasso, Elastic Net, and Random Forest and gradient boosting importance. I also did the exploratory analysis, built an evaluation pipeline scoring each method on accuracy, sparsity and runtime, and wrote the report."
+            ]
+          },
+          {
+            "label": "Outcome",
+            "paragraphs": [
+              "Forward stepwise won overall, reaching 0.774 balanced accuracy with just 30 features. Elastic Net scored highest at 0.805 but needed 2,168 features and failed to generalise. I also explained why Random Forest importance favoured noisy features, and why mRMR fails when features are nearly uncorrelated."
+            ]
+          }
+        ],
+        "title": "Feature Selection for Neural Decoding",
+        "summary": "30 of 11,190 features, 77% balanced accuracy",
+        "url": "https://github.com/fatma-noor/high-dimensional-feature-selection"
+      },
+      {
+        "skills": [],
+        "sections": [
+          {
+            "label": "Overview",
+            "paragraphs": [
+              "With 40 million ad impressions, is it better to train one model on everything, or to split the data and train a separate model for each group? We tested this on the Avazu click-through dataset, covering 10 days of mobile ad impressions."
+            ]
+          },
+          {
+            "label": "Approach",
+            "paragraphs": [
+              "I led a group of three, setting the research question, dividing the work and bringing everyone's pieces together. We built a PySpark pipeline on Google Cloud Dataproc and compared three logistic regression set-ups: one global model; separate models for ads on mobile websites and ads inside apps; and 24 models, one per hour of the day. I built the exploratory analysis, the preprocessing pipeline and the website-versus-app model. We tested every model on later days than it was trained on, as a real ad system would be used, and ran scaling tests from 25% to 100% of the data."
+            ]
+          },
+          {
+            "label": "Outcome",
+            "paragraphs": [
+              "The global model ranked clicks best and trained about 10x faster. The hourly models gave the most accurate click probabilities, which matters because those probabilities set ad bid prices. In early tests, the app channel alone outperformed every other model, pointing to a hybrid approach: separate models for app traffic, the global model for the rest."
+            ]
+          }
+        ],
+        "title": "Distributed Ad-Click Prediction",
+        "summary": "One global model beat partitioned models on ranking, at a tenth of the training time",
+        "url": "https://github.com/fatma-noor/avazu-ctr-prediction"
+      },
+      {
+        "skills": [],
+        "sections": [
+          {
+            "label": "Overview",
+            "paragraphs": [
+              "Retailers sell some products exclusively, only through their own stores and website, to draw shoppers in. Does it work? We tested whether exclusive Sephora products get more engagement, and whether customers like them more, across 8,494 products and about 1 million reviews."
+            ]
+          },
+          {
+            "label": "Approach",
+            "paragraphs": [
+              "I led the group, setting the research question, dividing the work and bringing everyone's pieces together. I did the exploratory analysis, built a logistic regression testing which product characteristics predict whether a product is exclusive, and clustered products by price, loves, rating and reviews to check whether exclusives dominate the top-performing tier. Alongside this, our regression models tested whether exclusivity still predicts loves after controlling for price, rating, reviews and category, and sentiment analysis compared how customers felt about exclusive and non-exclusive products."
+            ]
+          },
+          {
+            "label": "Outcome",
+            "paragraphs": [
+              "Exclusive products got more loves and reviews, but their reviews were no more positive. Exclusivity helps products get noticed without making customers happier with them."
+            ]
+          }
+        ],
+        "title": "Sephora Exclusivity Analysis",
+        "summary": "Exclusives win attention without winning happier reviews",
+        "url": "https://github.com/fatma-noor/sephora-exclusivity-analysis"
+      }
+    ]
+  },
+  "leadership": [
+    {
+      "skills": [],
+      "sections": [
+        {
+          "label": "Problem",
+          "paragraphs": [
+            "The summit, themed on AI in Africa, needed sponsors to fund it."
+          ]
+        },
+        {
+          "label": "What I did",
+          "paragraphs": [
+            "I built a target list of 50 organisations and tracked the pipeline in Excel. I found prospects through cold emails, LinkedIn and mutual contacts, then held calls to understand what each company wanted and negotiated a package to fit. One company wanted access to talent. I proposed a £5,000 package, they countered at £3,500, and we agreed £4,000 with logos on the brochures and at the event, plus a speaking slot on a panel."
+          ]
+        },
+        {
+          "label": "Result",
+          "paragraphs": [
+            "I converted 5 of 50 organisations and raised £20k+."
+          ]
+        }
+      ],
+      "title": "LSE Africa Summit 2026",
+      "role": "Finance & Sponsorship Team",
+      "summary": "Raised £20k+ in sponsorship for the summit, held in March 2026"
+    },
+    {
+      "skills": [],
+      "sections": [
+        {
+          "label": "Problem",
+          "paragraphs": [
+            "LSE admits students from many backgrounds, but the one-year MSc Data Science is built for recent graduates in fields like computer science, maths or engineering. Career changers and students returning after years of work have to rebuild statistics, maths and coding foundations while keeping pace with advanced courses, often with several deadlines landing in the same two weeks. Unlike reading-based MScs, these skills can't be caught up through independent reading, and the part-time option isn't open to international students on standard visas."
+          ]
+        },
+        {
+          "label": "What I did",
+          "paragraphs": [
+            "Before the staff-student liaison meeting, I surveyed the cohort on workload, structure and programme length (25 responses). I then wrote and presented a proposal to the department for an optional two-year pathway: a first year on foundations, and a second on advanced coursework, a substantive capstone and research. The one-year route would stay unchanged. I addressed the likely objections, including cost to students, perceived dilution of the one-year degree, and staffing, and set out four questions a feasibility review should answer: market demand, resources, programme design and visa compliance."
+          ]
+        },
+        {
+          "label": "Result",
+          "paragraphs": [
+            "Most students found the workload manageable (71%), but 80% wanted the compulsory course structure changed, 56% would have preferred a slower first half, and a slight majority (52%) preferred a two-year programme. Students' recurring theme was wanting stronger foundations in statistics, programming and maths before advanced machine learning. The department was receptive, especially after seeing the survey evidence. The proposal was reviewed in department meetings, and a team has been set up to investigate its feasibility and whether and how to launch it."
+          ]
+        }
+      ],
+      "title": "MSc Programme Proposal",
+      "role": "Academic Representative, MSc Data Science",
+      "summary": "Proposed an optional two-year MSc Data Science pathway, now under a feasibility review"
+    },
+    {
+      "skills": [],
+      "sections": [
+        {
+          "label": "Problem",
+          "paragraphs": [
+            "The Department of Statistics is less well known than departments like Economics or Geography. The summit was a chance to build industry relationships and raise the department's profile."
+          ]
+        },
+        {
+          "label": "What I did",
+          "paragraphs": [
+            "I was one of 20 LSE Statistics students selected for a delegate pass. I represented the MSc programme, attended talks, built relationships with senior figures, and introduced them to LSE's External Engagement team."
+          ]
+        },
+        {
+          "label": "Result",
+          "paragraphs": [
+            "Two companies are now working with LSE. One is running an early careers programme with the university, and the other works with the department through student capstone projects."
+          ]
+        }
+      ],
+      "title": "AI Summit London 2026",
+      "role": "Department Delegate",
+      "summary": "Brought two companies into partnerships with LSE"
+    }
+  ],
+  "education": {
+    "institutions": [
+      {
+        "heading": "The London School of Economics and Political Science | 2025 to 2026",
+        "paragraphs": [
+          "MSc Data Science (awaiting final results)",
+          "Relevant coursework: Machine Learning, Multivariate Methods, Distributed Computing for Big Data"
+        ]
+      },
+      {
+        "heading": "University of Nairobi | 2016 to 2020",
+        "paragraphs": [
+          "BSc Economics and Statistics, First Class Honours",
+          "Graduated in the top 1% of my class and top of the Faculty of Arts and Social Sciences."
+        ]
+      }
+    ],
+    "prizes": {
+      "heading": "Prizes",
+      "items": [
+        "Gandhi Smarak Nidhi Trustee Fund (2019/20): Best final-year student, Faculty of Arts and Social Sciences",
+        "University of Nairobi Alumni Association Prize (2019/20): Best overall student, Faculty of Arts and Social Sciences",
+        "Prof. Arthur T. Porter Prize (2019/20): Best final-year student, Faculty of Arts and Social Sciences",
+        "Prof. Jane F. Mariara Award (2019/20): Best female student, BSc Economics and Statistics",
+        "Prof. Jane Kabubo Mariara Award (2017/18): Best overall second-year student, BSc Economics and Statistics"
+      ]
+    }
+  },
+  "hobbies": {
+    "heading": "Supporting women at work",
+    "intro": "I come from an environment where not many women go into the workforce, and supporting women at work is one of the things that drives me most. I've always made time for initiatives that help, and these are two of them.",
+    "initiatives": [
+      {
+        "heading": "Project Girls 4 Girls Kenya | Mentor | 2021 to present",
+        "text": "Women in Kenya often step into offices dominated by men, with few senior women to look up to, especially women from minority backgrounds. Project G4G mentors women of all ages and connects them with accomplished women who can serve as role models. Its mentorship covers communication, networking, ethics, standing up for yourself, and running for public office. I mentor women aged 25 to 34 from the Association of Women Accountants of Kenya."
+      },
+      {
+        "heading": "Women@BCG Nairobi | Core team member",
+        "text": "I joined the Nairobi core team as an entry-level analyst, when it was just two people, a managing director and a senior consultant. I helped set it up in the office and plan its programme each year: masterclasses, International Women's Day with a guest speaker, interactive events, and an end-of-year event for the office's women. We worked with the recruiting team on hiring more women, recommending extra support for women during interviews. Drawing on my Project G4G experience, we brought Empower Her, already running in other BCG offices, to Nairobi. It pairs students from different universities with BCG analysts to learn consulting skills, and most students who completed it went on to join BCG full-time."
+      }
+    ],
+    "interestsHeading": "Other interests",
+    "interests": [
+      "Puzzles and strategy games: all kinds. Sudoku, kakuro, and strategy shows like Survivor, The Circle and The Amazing Race.",
+      "Baking: I bake a lot.",
+      "Eating out: if there's a new restaurant, sign me up."
+    ]
+  },
+  "contact": {
+    "fields": [
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "autocomplete": "name"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "autocomplete": "email"
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea"
+      }
+    ],
+    "submit": "Send",
+    "success": "Thanks, your message has been sent.",
+    "error": "Your message could not be sent. Please try again.",
+    "required": "Please complete this field.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "accessibility": {
+    "skip": "Skip to content",
+    "navigation": "Portfolio sections",
+    "loadError": "The portfolio could not load. Please refresh the page.",
+    "sending": "Sending your message",
+    "errorSummary": "Please check the form.",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode"
+  },
+  "photos": {
+    "headshot": {
+      "alt": "Fatma Noor Kassim",
+      "variants": [
+        {
+          "src": "images/web/fatma-noor-480.webp",
+          "width": 480,
+          "height": 720
+        },
+        {
+          "src": "images/web/fatma-noor-960.webp",
+          "width": 960,
+          "height": 1440
+        }
+      ]
+    },
+    "lse": {
+      "alt": "Fatma seated on the LSE sign outside the university",
+      "variants": [
+        {
+          "src": "images/web/fatma-at-lse-480.webp",
+          "width": 480,
+          "height": 640
+        },
+        {
+          "src": "images/web/fatma-at-lse-960.webp",
+          "width": 960,
+          "height": 1280
+        }
+      ]
+    },
+    "eatingOut": [
+      {
+        "alt": "Fatma holding a plate of brunch at a restaurant",
+        "variants": [
+          {
+            "src": "images/web/eating-out-brunch-480.webp",
+            "width": 480,
+            "height": 640
+          },
+          {
+            "src": "images/web/eating-out-brunch-960.webp",
+            "width": 960,
+            "height": 1280
+          }
+        ]
+      },
+      {
+        "alt": "Fatma holding a chocolate cupcake in a cafe",
+        "variants": [
+          {
+            "src": "images/web/eating-out-cupcake-480.webp",
+            "width": 480,
+            "height": 640
+          },
+          {
+            "src": "images/web/eating-out-cupcake-960.webp",
+            "width": 960,
+            "height": 1280
+          }
+        ]
+      },
+      {
+        "alt": "Fatma with a slice of cake topped with berries at a cafe",
+        "variants": [
+          {
+            "src": "images/web/eating-out-cake-480.webp",
+            "width": 480,
+            "height": 640
+          },
+          {
+            "src": "images/web/eating-out-cake-960.webp",
+            "width": 960,
+            "height": 1280
+          }
+        ]
+      }
+    ]
+  }
+}

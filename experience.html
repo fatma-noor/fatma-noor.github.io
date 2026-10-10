@@ -1,72 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience — Fatma Noor Kassim</title>
-  <meta name="description" content="Experience — Fatma Noor Kassim.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <meta name="description" content="">
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="vendor/formspree-ajax.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="nav-brand" href="index.html">Fatma Noor Kassim</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="experience.html" aria-current="page">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="files/Fatma_Noor_Kassim_CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
-      </ul>
+  <a class="skip-link" href="#main"></a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home"></a>
+      <button class="theme-toggle icon-button" id="theme-toggle" type="button"></button>
+      <nav id="navigation"></nav>
     </div>
-  </nav>
-
-  <main>
-    <div class="container">
-      <section class="section">
-        <h1>Experience</h1>
-
-        <div class="entry">
-          <h3>Research Assistant — Blavatnik School of Government, University of Oxford</h3>
-          <p class="entry-meta">May 2026 to present</p>
-          <p>Technical lead within a multi-RA team on Rosa, an AI chatbot supporting survivors of modern slavery. Responsible for the website hosting the chatbot, a database for ethical data collection, analytics, and UX and ethical evaluation, while other RAs cover market research and qualitative work. Built with Python and Claude Code. Prototyped, not yet deployed.</p>
-        </div>
-
-        <div class="entry">
-          <h3>The Boston Consulting Group — Nairobi</h3>
-          <p class="entry-meta">June 2021 to June 2025</p>
-          <p>Four years across strategy and delivery for governments, foundations, and private clients in healthcare, fintech, and development. Progressed from Business Analyst to Consultant; initial contract converted to a permanent offer.</p>
-          <ul class="bullets">
-            <li>Contributed to a national AI strategy for a government ministry, defining priority use cases across agriculture, healthcare, and education, and benchmarking Singapore, Estonia, and UAE approaches.</li>
-            <li>Worked alongside BCG X on geospatial analysis of a national mobile money agent network, translating coverage and whitespace findings into agent-placement recommendations.</li>
-            <li>Led end-to-end delivery of a pan-African healthcare accelerator: screened 100+ applications, managed a team of three through due diligence on 30 finalists, and selected 10 companies for the 2024 cohort.</li>
-            <li>Identified $2M in annual cost savings by analysing operations across the five business units of a conglomerate.</li>
-            <li>Ran field research with 500+ livestock value chain actors in East Africa, informing a demand-led pilot later replicated across three countries.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Leadership &amp; activities</h2>
-        <ul class="bullets">
-          <li>Academic Representative, MSc Data Science, LSE. Proposed extending the MSc from one year to two, ran a student survey to evidence demand, and submitted a formal proposal now under faculty review.</li>
-          <li>Finance and Sponsorship team, LSE Africa Summit 2026. Raised £20,000+ in sponsorship.</li>
-          <li>Mentor, Project Girls For Girls Kenya (2021 to present). Mentor six women on leadership, negotiation, and decision-making.</li>
-        </ul>
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span class="year"></span> Fatma Noor Kassim</p>
-    </div>
-  </footer>
-
-  <script>
-    document.querySelectorAll('.year').forEach(function (el) {
-      el.textContent = new Date().getFullYear();
-    });
-  </script>
+  </header>
+  <main id="main" tabindex="-1"></main>
 </body>
 </html>
