@@ -7,6 +7,14 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, '.qa');
 fs.mkdirSync(output, { recursive: true });
 const content = JSON.parse(fs.readFileSync(path.join(root, 'content.json'), 'utf8'));
+const preview = content.socialPreview;
+const previewPng = fs.readFileSync(path.join(root, preview.image));
+assert.equal(previewPng.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', 'Valid PNG preview');
+assert.equal(previewPng.readUInt32BE(16), preview.width);
+assert.equal(previewPng.readUInt32BE(20), preview.height);
+assert.equal(preview.width, 1200);
+assert.equal(preview.height, 627);
+assert(fs.readFileSync(path.join(root, '.github/workflows/pages.yml'), 'utf8').includes('cp images/og-preview.png _site/images/'), 'Deploy preview image');
 const snapshot = path.join(output, 'content-before-home-refresh.json');
 if (fs.existsSync(snapshot)) {
   const before = JSON.parse(fs.readFileSync(snapshot, 'utf8'));
@@ -54,7 +62,7 @@ assert.equal(content.education.prizes.items.length, 5);
     const relative = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname).replace(/^\//, '') || 'index.html';
     const file = path.resolve(root, relative);
     if (!file.startsWith(root + path.sep) || !fs.existsSync(file) || !fs.statSync(file).isFile()) { response.writeHead(404); response.end(); return; }
-    const types = {'.html':'text/html','.js':'application/javascript','.json':'application/json','.css':'text/css','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'};
+    const types = {'.html':'text/html','.js':'application/javascript','.json':'application/json','.css':'text/css','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2'};
     response.setHeader('Content-Type',types[path.extname(file)] || 'application/octet-stream');
     fs.createReadStream(file).pipe(response);
   });
@@ -66,6 +74,37 @@ assert.equal(content.education.prizes.items.length, 5);
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if (response.url().startsWith('http://127.0.0.1') && response.status() >= 400) localFailures.push(response.url()); });
   try {
+    const crawler = await browser.newContext({ javaScriptEnabled: false });
+    const crawlerPage = await crawler.newPage();
+    const htmlPages = fs.readdirSync(root).filter(file => file.endsWith('.html'));
+    for (const file of htmlPages) {
+      await crawlerPage.goto(`http://127.0.0.1:8089/${file}`);
+      const image = new URL(preview.image, preview.siteUrl).href;
+      const properties = {
+        'og:type': 'website', 'og:site_name': content.navBrand, 'og:title': content.navBrand,
+        'og:description': content.home.strapline,
+        'og:url': new URL(file === 'index.html' ? '' : file, preview.siteUrl).href,
+        'og:image': image, 'og:image:type': 'image/png',
+        'og:image:width': String(preview.width), 'og:image:height': String(preview.height),
+        'og:image:alt': content.navBrand
+      };
+      const twitter = {
+        'twitter:card': 'summary_large_image', 'twitter:title': content.navBrand,
+        'twitter:description': content.home.strapline, 'twitter:image': image,
+        'twitter:image:alt': content.navBrand
+      };
+      for (const [attribute, tags] of [['property', properties], ['name', twitter]]) {
+        for (const [key, value] of Object.entries(tags)) {
+          const tag = crawlerPage.locator(`head meta[${attribute}="${key}"]`);
+          assert.equal(await tag.count(), 1, `One ${key} on ${file}`);
+          assert.equal(await tag.getAttribute('content'), value, `Static ${key} on ${file}`);
+        }
+      }
+    }
+    const imageResponse = await crawlerPage.request.get('http://127.0.0.1:8089/' + preview.image);
+    assert.equal(imageResponse.status(), 200);
+    assert.equal(imageResponse.headers()['content-type'], 'image/png');
+    await crawler.close();
     await page.goto('http://127.0.0.1:8089');
     await page.locator('#view-home h1').waitFor();
     await page.evaluate(() => document.fonts.ready);
@@ -300,7 +339,7 @@ assert.equal(content.education.prizes.items.length, 5);
     }
     assert.deepEqual(errors,[]);
     assert.deepEqual(localFailures,[]);
-    const results={checkedCopy,viewports:5,themes:2,tabs:7,bcgProjects:12,simulatedFormRequests:requestCount,pageErrors:errors,missingAssets:localFailures,contrastResults};
+    const results={checkedCopy,sharingPages:htmlPages.length,previewSize:[preview.width,preview.height],viewports:5,themes:2,tabs:7,bcgProjects:12,simulatedFormRequests:requestCount,pageErrors:errors,missingAssets:localFailures,contrastResults};
     fs.writeFileSync(path.join(output,'checks.json'),JSON.stringify(results,null,2));
     console.log(JSON.stringify(results));
   } finally { await browser.close(); await new Promise(resolve=>server.close(resolve)); }

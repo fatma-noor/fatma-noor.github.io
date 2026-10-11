@@ -19,11 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
+      - name: Generate sharing metadata from content
+        run: node tools/generate_social_meta.cjs
       - name: Package public static files
         run: |
           mkdir _site
           cp index.html experience.html projects.html contact.html style.css app.js theme.js content.json _site/
           mkdir -p _site/images/web
+          cp images/og-preview.png _site/images/
           cp images/web/*-[0-9]*.webp _site/images/web/
           cp -R images/icons images/logos _site/images/
           cp -R fonts vendor _site/

@@ -1,6 +1,12 @@
 {
   "name": "Fatma Noor Kassim",
   "navBrand": "Fatma Noor",
+  "socialPreview": {
+    "siteUrl": "https://fatma-noor.github.io/",
+    "image": "images/og-preview.png",
+    "width": 1200,
+    "height": 627
+  },
   "sectionHeadings": {
     "about": { "label": "About", "heading": "From consulting to building" },
     "tools": { "label": "Tools", "heading": "Tools I work with" },
